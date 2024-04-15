@@ -3,6 +3,7 @@
 using namespace std;
 class Counter{
     static int count;
+
    public :
         Counter(){
             count=count+1;
@@ -11,4 +12,10 @@ class Counter{
     void num_of_objs(){
         cout<<"Total number of objects : "<<count<<endl;
     }
+
 };
+ int Counter:: count=0;
+int main(){
+    Counter c1,c2,c3;
+    return 0;
+}
