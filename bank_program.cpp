@@ -19,15 +19,13 @@ class Bank{
     }
     void deposit(int amount){
         cout<<"Balance before deposit : "<<balance<<endl;
-        cout<<"Enter the amount of money to be deposited in the bank account : "<<endl;
-        cin>>amount;
+        
         balance=balance+amount;
         cout<<"Balance after deposit : "<<balance<<endl;
     }
     void withdraw(int amount){
         cout<<"Balance before withdrawing : "<<balance<<endl;
-        cout<<"Enter the amount of money to be withdrawn from the bank account : "<<endl;
-        cin>>amount;
+        
         if (amount>balance){
         cout<<"Not enough money in account"<<endl;
         }
@@ -49,9 +47,37 @@ class Bank{
 };
 int main(){
     Bank b1;
-    int amount;
-    b1.deposit(amount);
-    b1.withdraw(amount);
-    b1.disp();
+    int amount,choice;
+    
+    
+    do{
+        cout<<"---(^^^^^^^^)_MAIN MENU_(^^^^^^^^)---"<<endl;
+        cout<<"\t***SERVICES***\t "<<endl;
+        cout<<"(1)Deposit Money"<<endl;
+        cout<<"(2)Withdraw Money"<<endl;
+        cout<<"(3)Display Account Details Money"<<endl;
+        cout<<"(4)QUIT"<<endl;
+        cout<<"Enter desired number to choose service of your choice : "<<endl;
+        cin>>choice;
+        switch(choice){
+            case 1:
+                cout<<"Enter the amount of money to be deposited in the bank account : "<<endl;
+                cin>>amount;
+                b1.deposit(amount);
+                break;
+
+            case 2:
+                cout<<"Enter the amount of money to be withdrawn from the bank account : "<<endl;
+                cin>>amount;
+                b1.withdraw(amount);
+                break;
+            case 3: 
+                b1.disp();
+                break;
+            case 4:
+                exit(0);
+                break;    
+        }
+    }while(1);
     return 0;
 }
