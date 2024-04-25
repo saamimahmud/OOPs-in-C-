@@ -25,8 +25,11 @@ class Distance{
 };
 int main(){
     Distance d1,d2;
+    cout<<"TRAVEL DETAILS OF DAY 1 ";
+    
     d1.get();
     d1.disp();
+    cout<<"TRAVEL DETAILS OF DAY 2 ";
     d2.get();
     d2.disp();
     d1.total(d2);
