@@ -41,6 +41,5 @@ int main(){
     int total_income;
     total_income= total(f,m);
     cout<<"The total income of the parents : "<<total_income<<endl;
-    return 0;
-    
+    return 0;   
 }
