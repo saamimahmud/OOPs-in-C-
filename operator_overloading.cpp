@@ -24,7 +24,7 @@ class add_name{
 
     }
     int main(){
-        add_name firstname("Mahud");
+        add_name firstname("Mahmud");
         
         add_name Full_name=firstname + name;
         Full_name.show();
